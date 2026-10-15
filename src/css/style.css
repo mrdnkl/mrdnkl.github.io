@@ -39,6 +39,12 @@ body {
   transition: background-color 0.5s ease;
 }
 
+
+
+
+
+
+/*
 @keyframes rotate {
   0% {
     transform: rotate(0deg);
@@ -68,3 +74,4 @@ body {
   animation: rotate 15s linear infinite;
   transform-origin: 84px 93px;
 }
+*/
