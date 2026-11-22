@@ -1,8 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
+  
   tailwind.config = {
     darkMode: "class"
   };
-
+  
   // Dark Modes
   if (
     localStorage.getItem("theme") === "dark" ||
