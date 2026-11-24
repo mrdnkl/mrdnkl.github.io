@@ -134,49 +134,50 @@
 </div>
 
 
-      <div class="cursor-pointer p-2 rounded-full bg-transparent">
+      <div class="cursor-pointer p-2 rounded-full bg-transparent shrink-0">
+  <svg id="navbar-burger" xmlns="http://www.w3.org/2000/svg" width="28" height="28" class="h-7 w-7 text-gray-800 dark:text-white" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+  </svg>
+</div>
 
-        <svg id="navbar-burger" xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-800 dark:text-white" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-        </svg>
-
+<div id="navbar-menu" class="navbar-menu relative z-50 hidden">
+  <div id="navbar-backdrop" class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+  <nav class="fixed top-0 right-0 bottom-0 flex flex-col w-full h-full py-6 px-6 bg-gray-900/90 backdrop-blur border-r overflow-y-auto">
+    <div class="flex items-center mb-8 gap-2">
+      <a class="shrink-0 text-3xl font-bold leading-none" href="#">
+        <img src="src/images/logo-512x512.png" width="72" height="72" alt="logo" class="w-[72px] h-[72px] object-contain">
+      </a>
+      <div class="text-xl p-1 font-medium bg-gradient-to-r from-indigo-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent flex items-center flex-1">
+        MURID NAKAL
       </div>
-      <div id="navbar-menu" class="navbar-menu relative z-50 hidden">
-        <div id="navbar-backdrop" class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
-        <nav class="fixed top-0 right-0 bottom-0 flex flex-col w-full h-full  py-6 px-6 bg-gray-900/90 backdrop-blur border-r overflow-y-auto">
-          <div class="flex items-center mb-8">
-            <a class="mr-auto text-3xl font-bold leading-none" href="#">
-              <img src="src/images/logo-512x512.png" width="72px" alt="logo" class="mr-2"></a>
-            <div class="text-xl p-1 font-medium bg-gradient-to-r from-indigo-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent flex items-center w-full">
-              MURID NAKAL
-            </div>
 
-            <button id="navbar-close" class="navbar-close">
-              <svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-          </div>
-          <div class="navbar-sub">
-            <ul>
-              <li class="mb-1">
-                <a class="block p-4 text-sm font-semibold text-gray-100 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">HOME</a>
-              </li>
-              <li class="mb-1">
-                <a class="block p-4 text-sm font-semibold text-gray-100 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">SERVICE</a>
-              </li>
-              <li class="mb-1">
-                <a class="block p-4 text-sm font-semibold text-gray-100 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">CONTACT</a>
-              </li>
-              <li class="mb-1">
-                <a class="block p-4 text-sm font-semibold text-gray-100 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">ABOUT US</a>
-              </li>
-              <li class="mb-1">
-                <a class="block p-4 text-sm font-semibold text-gray-100 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">DISCLAIMER</a>
-              </li>
-            </ul>
-          </div>
+      <button id="navbar-close" type="button" aria-label="Close menu" class="navbar-close shrink-0 p-1">
+        <svg width="24" height="24" class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
 
+    <div class="navbar-sub">
+      <ul>
+        <li class="mb-1">
+          <a class="block p-4 text-sm font-semibold text-gray-100 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">HOME</a>
+        </li>
+        <li class="mb-1">
+          <a class="block p-4 text-sm font-semibold text-gray-100 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">SERVICE</a>
+        </li>
+        <li class="mb-1">
+          <a class="block p-4 text-sm font-semibold text-gray-100 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">CONTACT</a>
+        </li>
+        <li class="mb-1">
+          <a class="block p-4 text-sm font-semibold text-gray-100 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">ABOUT US</a>
+        </li>
+        <li class="mb-1">
+          <a class="block p-4 text-sm font-semibold text-gray-100 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">DISCLAIMER</a>
+        </li>
+      </ul>
+    </div>
+  
           <div class="mt-20 text-center w-full sm:w-auto">
   <div class="text-sm mb-3 font-medium bg-gradient-to-r from-indigo-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent flex items-center justify-center">
     GET IN TOUCH
