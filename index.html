@@ -5,18 +5,27 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script>
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    }
+  </script>
+  <title>Murid Nakal Official</title>
   <meta name="description" content="Murid Nakal Official">
   <meta name="keywords" content="Website, Facebook, Instagram, Youtube, Twitter, Google, Bing, Yahoo, Alexa, Telegram, Twitch">
   <meta name="author" content="Murid Nakal">
   <meta name="google-site-verification" content="SqOFewXjs1d_-9XolCHyuKj3kBgqykLTqQ3hrUzcAxw" />
-  <title>Murid Nakal Official</title>
   <link rel="apple-touch-icon" sizes="180x180" href="src/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="src/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="src/favicon/favicon-16x16.png">
-    <link rel="manifest" href="src/favicon/site.webmanifest">
-  <link rel="icon" href="src/favicon/favicon.ico" type="image/ico">
-  <script src="//cdn.jsdelivr.net/npm/tailwindcss-cdn@3.4.10/tailwindcss.js"></script>
+  <link rel="icon" type="image/png" sizes="32x32" href="src/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="src/favicon/favicon-16x16.png">
+  <link rel="manifest" href="src/favicon/site.webmanifest">
+  <link rel="icon" type="image/x-ico" href="src/favicon/favicon.ico">
+  <script type="text/tailwindcss" src="//cdn.jsdelivr.net/npm/tailwindcss-cdn@3.4.10/tailwindcss.js"></script>
+  <script>
+    tailwind.config = { 
+      darkMode: 'class' 
+    }
+  </script>
   <link rel="preconnect" href="//cdn.jsdelivr.net" crossorigin>
   <link rel="preconnect" href="//fonts.googleapis.com">
   <link rel="preconnect" href="//fonts.gstatic.com" crossorigin>
@@ -164,33 +173,38 @@
             </ul>
           </div>
 
-          <div class="mt-20 text-center items-center justify-center w-full sm:w-auto">
-            <div class="text-sm mb-3 font-medium bg-gradient-to-r from-indigo-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent flex items-center justify-center">
-              GET IN TOUCH
-            </div>
+          <div class="mt-20 text-center w-full sm:w-auto">
+  <div class="text-sm mb-3 font-medium bg-gradient-to-r from-indigo-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent flex items-center justify-center">
+    GET IN TOUCH
+  </div>
 
-            <a href="#" class="inline-flex items-center justify-center h-7 w-7 border border-gray-100 rounded-full mr-1 text-gray-100 hover:text-cyan-400 hover:border-cyan-400">
-              <i class="fab fa-facebook w-4 h-4 fill-current"></i>
-            </a>
-            <a href="#" class="inline-flex items-center justify-center h-7 w-7 border border-gray-100 rounded-full mr-1 text-gray-100 hover:text-cyan-400 hover:border-cyan-400">
-              <i class="fab fa-x-twitter w-4 h-4 fill-current"></i>
-            </a>
-            <a href="#" class="inline-flex items-center justify-center h-7 w-7 border border-gray-100 rounded-full mr-1 text-gray-100 hover:text-cyan-400 hover:border-cyan-400">
-              <i class="fab fa-instagram w-4 h-4 fill-current"></i>
-            </a>
-            <a href="#" class="inline-flex items-center justify-center h-7 w-7 border border-gray-100 rounded-full mr-1 text-gray-100 hover:text-cyan-400 hover:border-cyan-400">
-              <i class="fab fa-youtube w-4 h-4 fill-current"></i></a>
-            <a href="#" class="inline-flex items-center justify-center h-7 w-7 border border-gray-100 rounded-full mr-1 text-gray-100 hover:text-cyan-400 hover:border-cyan-400">
-              <i class="fab fa-tiktok w-4 h-4 fill-current"></i>
-            </a>
-            <a href="#" class="inline-flex items-center justify-center h-7 w-7 border border-gray-100 rounded-full mr-1 text-gray-100 hover:text-cyan-400 hover:border-cyan-400">
-              <i class="fab fa-github w-4 h-4 fill-current"></i>
-            </a>
+  <!-- Flex container replaces mr-1 and eliminates inline whitespace gaps -->
+  <div class="flex items-center justify-center gap-1.5">
+    <a href="#" aria-label="Facebook" class="size-7 inline-flex items-center justify-center border border-gray-100 rounded-full text-gray-100 hover:text-cyan-400 hover:border-cyan-400 transition-colors">
+      <i class="fab fa-facebook-f text-xs leading-none"></i>
+    </a>
+    <a href="#" aria-label="X Twitter" class="size-7 inline-flex items-center justify-center border border-gray-100 rounded-full text-gray-100 hover:text-cyan-400 hover:border-cyan-400 transition-colors">
+      <i class="fab fa-x-twitter text-xs leading-none"></i>
+    </a>
+    <a href="#" aria-label="Instagram" class="size-7 inline-flex items-center justify-center border border-gray-100 rounded-full text-gray-100 hover:text-cyan-400 hover:border-cyan-400 transition-colors">
+      <i class="fab fa-instagram text-xs leading-none"></i>
+    </a>
+    <a href="#" aria-label="YouTube" class="size-7 inline-flex items-center justify-center border border-gray-100 rounded-full text-gray-100 hover:text-cyan-400 hover:border-cyan-400 transition-colors">
+      <i class="fab fa-youtube text-xs leading-none"></i>
+    </a>
+    <a href="#" aria-label="TikTok" class="size-7 inline-flex items-center justify-center border border-gray-100 rounded-full text-gray-100 hover:text-cyan-400 hover:border-cyan-400 transition-colors">
+      <i class="fab fa-tiktok text-xs leading-none"></i>
+    </a>
+    <a href="#" aria-label="GitHub" class="size-7 inline-flex items-center justify-center border border-gray-100 rounded-full text-gray-100 hover:text-cyan-400 hover:border-cyan-400 transition-colors">
+      <i class="fab fa-github text-xs leading-none"></i>
+    </a>
+  </div>
 
-            <footer class="mt-10 items-center justify-center text-sm text-center text-gray-100">
-              <p class="inline">&copy;MURID NAKAL 2026-2029. ALL RIGHTS RESERVED.</p>
-            </footer>
-          </div>
+  <footer class="mt-10 text-sm text-center text-gray-100">
+    <p>&copy;MURID NAKAL 2026-2029. ALL RIGHTS RESERVED.</p>
+  </footer>
+</div>
+
         </nav>
       </div>
     </div>
