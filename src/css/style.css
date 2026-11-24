@@ -38,25 +38,38 @@ body {
   min-height: 100vh;
   transition: background-color 0.5s ease;
 }
+  /* Theme toggle button & icons */
+  #button-switch {
+    width: 2rem;
+    height: 2rem;
+  }
+  #navbar-sun,
+  #navbar-moon {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+  #navbar-sun {
+    display: none;
+  }
+  html.dark #navbar-sun {
+    display: block;
+  }
+  html.dark #navbar-moon {
+    display: none;
+  }
 
-#button-switch {
-  width: 2rem;
-  height: 2rem;
-}
-#navbar-sun,
-#navbar-moon {
-  width: 1.25rem;
-  height: 1.25rem;
-}
-#navbar-sun {
-  display: none;
-}
-html.dark #navbar-sun {
-  display: block;
-}
-html.dark #navbar-moon {
-  display: none;
-}
+  /* Burger icon & hidden mobile menu before Tailwind CDN compiles */
+  #navbar-burger {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+  #navbar-close svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  #navbar-menu.hidden {
+    display: none;
+  }
 
 .svg-inline--fa {
   width: 0.875rem;
