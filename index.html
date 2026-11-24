@@ -160,8 +160,57 @@
           <a class="block p-4 text-sm font-semibold text-gray-100 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">HOME</a>
         </li>
         <li class="mb-1">
-          <a class="block p-4 text-sm font-semibold text-gray-100 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">SERVICE</a>
+    <!-- Dropdown Trigger -->
+    <button
+        type="button"
+        id="service-dropdown-btn"
+        aria-expanded="false"
+        class="w-full flex items-center justify-between p-4 text-sm font-semibold text-gray-100 hover:bg-blue-50 hover:text-blue-600 rounded transition-colors"
+    >
+        <span>SERVICES</span>
+        <svg
+            id="service-chevron"
+            width="16"
+            height="16"
+            class="w-4 h-4 transition-transform duration-200"
+            xmlns="http://w3.org"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+        >
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+    </button>
+
+    <!-- Submenu Links -->
+    <ul id="service-submenu" class="hidden pl-4 mt-1 space-y-1 border-l border-gray-700 ml-4">
+        <li>
+            <a
+                class="block p-3 text-sm font-medium text-gray-300 hover:bg-blue-50 hover:text-blue-600 rounded"
+                href="#"
+            >
+                Web Development
+            </a>
         </li>
+        <li>
+            <a
+                class="block p-3 text-sm font-medium text-gray-300 hover:bg-blue-50 hover:text-blue-600 rounded"
+                href="#"
+            >
+                UI/UX Design
+            </a>
+        </li>
+        <li>
+            <a
+                class="block p-3 text-sm font-medium text-gray-300 hover:bg-blue-50 hover:text-blue-600 rounded"
+                href="#"
+            >
+                Digital Marketing
+            </a>
+        </li>
+    </ul>
+</li>
+
         <li class="mb-1">
           <a class="block p-4 text-sm font-semibold text-gray-100 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">CONTACT</a>
         </li>
