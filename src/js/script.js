@@ -23,4 +23,20 @@ document.addEventListener("DOMContentLoaded", function () {
   burger.forEach((el) => el.addEventListener("click", toggleMenu));
   close.forEach((el) => el.addEventListener("click", toggleMenu));
   backdrop.forEach((el) => el.addEventListener("click", toggleMenu));
+
+// Service Submenu Toggle
+const serviceBtn = document.querySelector("#service-dropdown-btn");
+const serviceSubmenu = document.querySelector("#service-submenu");
+const serviceChevron = document.querySelector("#service-chevron");
+
+if (serviceBtn && serviceSubmenu) {
+  serviceBtn.addEventListener("click", () => {
+    const isHidden = serviceSubmenu.classList.toggle("hidden");
+    serviceBtn.setAttribute("aria-expanded", String(!isHidden));
+    if (serviceChevron) {
+      serviceChevron.classList.toggle("rotate-180");
+    }
+  });
+}
+  
 });
