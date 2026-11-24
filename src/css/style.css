@@ -39,6 +39,41 @@ body {
   transition: background-color 0.5s ease;
 }
 
+#button-switch {
+  width: 2rem;
+  height: 2rem;
+}
+#navbar-sun,
+#navbar-moon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+#navbar-sun {
+  display: none;
+}
+html.dark #navbar-sun {
+  display: block;
+}
+html.dark #navbar-moon {
+  display: none;
+}
+
+.svg-inline--fa {
+  width: 0.875rem;
+  height: 0.875rem;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.social-link {
+  width: 1.75rem;
+  height: 1.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+}
+
 /*
 a {
   text-decoration: none;
