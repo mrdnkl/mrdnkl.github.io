@@ -21,6 +21,15 @@
       darkMode: 'class' 
     }
   </script>
+  <script>
+    if (
+      localStorage.getItem("theme") === "dark" ||
+      (!("theme" in localStorage) &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
+    ) {
+      document.documentElement.classList.add("dark");
+    }
+  </script>
   <link rel="preconnect" href="//cdn.jsdelivr.net" crossorigin>
   <link rel="preconnect" href="//fonts.googleapis.com">
   <link rel="preconnect" href="//fonts.gstatic.com" crossorigin>
@@ -238,6 +247,6 @@
   </main>
 
 </body>
-<script src="src/scripts/script.js"></script>
+<script src="src/js/script.js"></script>
 
 </html>
