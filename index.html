@@ -17,15 +17,15 @@
   <link rel="icon" type="image/x-ico" href="src/favicon/favicon.ico">
   <script src="//cdn.jsdelivr.net/npm/tailwindcss-cdn@3.4.10/tailwindcss.js"></script>
   <script>
-    tailwind.config = { 
-      darkMode: 'class' 
+    tailwind.config = {
+      darkMode: 'class'
     }
   </script>
   <script>
-  if (localStorage.getItem("theme") !== "light") {
-    document.documentElement.classList.add("dark");
-  }
-</script>
+    if (localStorage.getItem("theme") !== "light") {
+      document.documentElement.classList.add("dark");
+    }
+  </script>
   <link rel="preconnect" href="//cdn.jsdelivr.net" crossorigin>
   <link rel="preconnect" href="//fonts.googleapis.com">
   <link rel="preconnect" href="//fonts.gstatic.com" crossorigin>
@@ -96,164 +96,118 @@
       </div>
 
       <div class="flex items-center space-x-2 sm:space-x-3 shrink-0">
-  <button 
-    id="button-switch" 
-    type="button"
-    aria-label="Toggle dark mode"
-    class="size-8 flex items-center justify-center cursor-pointer rounded-full bg-gray-600 dark:bg-gray-800 border border-gray-600 transition-colors"
-  >
-    <svg 
-      id="navbar-sun" 
-      xmlns="http://www.w3.org/2000/svg" 
-      width="20" 
-      height="20" 
-      class="size-5 shrink-0 text-white hidden dark:block" 
-      fill="none" 
-      viewBox="0 0 24 24" 
-      stroke="currentColor"
-    >
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-    </svg>
+        <button id="button-switch" type="button" aria-label="Toggle dark mode" class="size-8 flex items-center justify-center cursor-pointer rounded-full bg-gray-600 dark:bg-gray-800 border border-gray-600 transition-colors">
+          <svg id="navbar-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="size-5 shrink-0 text-white hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
 
-    <svg 
-      id="navbar-moon" 
-      xmlns="http://www.w3.org/2000/svg" 
-      width="20" 
-      height="20" 
-      class="size-5 shrink-0 text-white block dark:hidden" 
-      viewBox="0 0 20 20" 
-      fill="currentColor"
-    >
-      <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
-    </svg>
-  </button>
-</div>
-
-
-      <div class="cursor-pointer p-2 rounded-full bg-transparent shrink-0">
-  <svg id="navbar-burger" xmlns="http://www.w3.org/2000/svg" width="28" height="28" class="h-7 w-7 text-gray-800 dark:text-white" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-  </svg>
-</div>
-
-<div id="navbar-menu" class="navbar-menu relative z-50 hidden">
-  <div id="navbar-backdrop" class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
-  <nav class="fixed top-0 right-0 bottom-0 flex flex-col w-full h-full py-6 px-6 bg-gray-900/90 backdrop-blur border-r overflow-y-auto">
-    <div class="flex items-center mb-8 gap-2">
-      <a class="shrink-0 text-3xl font-bold leading-none" href="#">
-        <img src="src/images/logo-512x512.png" width="72" height="72" alt="logo" class="w-[72px] h-[72px] object-contain">
-      </a>
-      <div class="text-xl p-1 font-medium bg-gradient-to-r from-indigo-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent flex items-center flex-1">
-        MURID NAKAL
+          <svg id="navbar-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="size-5 shrink-0 text-white block dark:hidden" viewBox="0 0 20 20" fill="currentColor">
+            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+          </svg>
+        </button>
       </div>
 
-      <button id="navbar-close" type="button" aria-label="Close menu" class="navbar-close shrink-0 p-1">
-        <svg width="24" height="24" class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      <div class="cursor-pointer p-2 rounded-full bg-transparent shrink-0">
+        <svg id="navbar-burger" xmlns="http://www.w3.org/2000/svg" width="28" height="28" class="h-7 w-7 text-gray-800 dark:text-white" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
         </svg>
-      </button>
-    </div>
+      </div>
 
-    <div class="navbar-sub">
-      <ul>
-        <li class="mb-1">
-          <a class="block p-3 text-sm font-semibold text-blue-600 hover:bg-gradient-to-r from-cyan-300 to-indigo-300 hover:text-gray-100 rounded" href="#">HOME</a>
-        </li>
-        <li class="mb-1">
-    <!-- Dropdown Trigger -->
-    <button
-        type="button"
-        id="service-dropdown-btn"
-        aria-expanded="false"
-        class="w-full flex items-center justify-between p-3 text-sm font-semibold text-gray-100 hover:bg-blue-50 hover:text-blue-600 rounded transition-colors"
-    >
-        <span>SERVICES</span>
-        <svg
-            id="service-chevron"
-            width="16"
-            height="16"
-            class="w-4 h-4 transition-transform duration-200"
-            xmlns="http://w3.org"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-        >
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-        </svg>
-    </button>
+      <div id="navbar-menu" class="navbar-menu relative z-50 hidden">
+        <div id="navbar-backdrop" class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+        <nav class="fixed top-0 right-0 bottom-0 flex flex-col w-full h-full py-6 px-6 bg-gray-900/90 backdrop-blur border-r overflow-y-auto">
+          <div class="flex items-center mb-8 gap-2">
+            <a class="shrink-0 text-3xl font-bold leading-none" href="#">
+              <img src="src/images/logo-512x512.png" width="72" height="72" alt="logo" class="w-[72px] h-[72px] object-contain">
+            </a>
+            <div class="text-xl p-1 font-medium bg-gradient-to-r from-indigo-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent flex items-center flex-1">
+              MURID NAKAL
+            </div>
 
-    <!-- Submenu Links -->
-    <ul id="service-submenu" class="hidden pl-4 mt-1 space-y-1 border-l border-gray-700 ml-4">
-        <li>
-            <a
-                class="block p-3 text-sm font-medium text-gray-300 hover:bg-blue-50 hover:text-blue-600 rounded"
-                href="#"
-            >
-                Web Development
-            </a>
-        </li>
-        <li>
-            <a
-                class="block p-3 text-sm font-medium text-gray-300 hover:bg-blue-50 hover:text-blue-600 rounded"
-                href="#"
-            >
-                UI/UX Design
-            </a>
-        </li>
-        <li>
-            <a
-                class="block p-3 text-sm font-medium text-gray-300 hover:bg-blue-50 hover:text-blue-600 rounded"
-                href="#"
-            >
-                Digital Marketing
-            </a>
-        </li>
-    </ul>
-</li>
+            <button id="navbar-close" type="button" aria-label="Close menu" class="navbar-close shrink-0 p-1">
+              <svg width="24" height="24" class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
 
-        <li class="mb-1">
-          <a class="block p-3 text-sm font-semibold text-gray-100 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">CONTACT</a>
-        </li>
-        <li class="mb-1">
-          <a class="block p-3 text-sm font-semibold text-gray-100 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">ABOUT US</a>
-        </li>
-        <li class="mb-1">
-          <a class="block p-3 text-sm font-semibold text-gray-100 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">DISCLAIMER</a>
-        </li>
-      </ul>
-    </div>
-  
+          <div class="navbar-sub">
+            <ul>
+              <li class="mb-1">
+                <a class="block p-3 text-sm font-semibold text-gray-100 hover:bg-gradient-to-r from-indigo-500 via-blue-400 to-cyan-400 hover:text-gray-200 rounded" href="#">HOME</a>
+              </li>
+              <li class="mb-1">
+                <!-- Dropdown Trigger -->
+                <button type="button" id="service-dropdown-btn" aria-expanded="false" class="w-full flex items-center justify-between p-3 text-sm font-semibold hover:bg-gradient-to-r from-indigo-500 via-blue-400 to-cyan-400 hover:text-gray-200 rounded transition-colors">
+                  <span>SERVICES</span>
+                  <svg id="service-chevron" width="16" height="16" class="w-4 h-4 transition-transform duration-200" xmlns="http://w3.org" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+
+                <!-- Submenu Links -->
+                <ul id="service-submenu" class="hidden pl-4 mt-1 space-y-1 border-l border-gray-700 ml-4">
+                  <li>
+                    <a class="block p-3 text-sm font-medium text-gray-100 hover:bg-gradient-to-r from-indigo-500 via-blue-400 to-cyan-400 hover:text-gray-200 rounded" href="#">
+                      Web Development
+                    </a>
+                  </li>
+                  <li>
+                    <a class="block p-3 text-sm font-medium text-gray-100 hover:bg-gradient-to-r from-indigo-500 via-blue-400 to-cyan-400 hover:text-gray-200 rounded" href="#">
+                      UI/UX Design
+                    </a>
+                  </li>
+                  <li>
+                    <a class="block p-3 text-sm font-medium text-gray-100 hover:bg-gradient-to-r from-indigo-500 via-blue-400 to-cyan-400 hover:text-gray-200 rounded" href="#">
+                      Digital Marketing
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="mb-1">
+                <a class="block p-3 text-sm font-semibold text-gray-100 hover:bg-gradient-to-r from-indigo-500 via-blue-400 to-cyan-400 hover:text-gray-200 rounded" href="#">CONTACT</a>
+              </li>
+              <li class="mb-1">
+                <a class="block p-3 text-sm font-semibold text-gray-100 hover:bg-gradient-to-r from-indigo-500 via-blue-400 to-cyan-400 hover:text-gray-200 rounded" href="#">ABOUT</a>
+              </li>
+              <li class="mb-1">
+                <a class="block p-3 text-sm font-semibold text-gray-100 hover:bg-gradient-to-r from-indigo-500 via-blue-400 to-cyan-400 hover:text-gray-200 rounded" href="#">DISCLAIMER</a>
+              </li>
+            </ul>
+          </div>
+
           <div class="mt-20 text-center w-full sm:w-auto">
-  <div class="text-sm mb-3 font-medium bg-gradient-to-r from-indigo-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent flex items-center justify-center">
-    GET IN TOUCH
-  </div>
+            <div class="text-sm mb-3 font-medium bg-gradient-to-r from-indigo-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent flex items-center justify-center">
+              GET IN TOUCH
+            </div>
 
-  <!-- Flex container replaces mr-1 and eliminates inline whitespace gaps -->
-  <div class="flex items-center justify-center gap-1.5">
-    <a href="#" aria-label="Facebook" class="size-7 inline-flex items-center justify-center border border-gray-100 rounded-full text-gray-100 hover:text-cyan-400 hover:border-cyan-400 transition-colors">
-      <i class="fab fa-facebook-f text-xs leading-none"></i>
-    </a>
-    <a href="#" aria-label="X Twitter" class="size-7 inline-flex items-center justify-center border border-gray-100 rounded-full text-gray-100 hover:text-cyan-400 hover:border-cyan-400 transition-colors">
-      <i class="fab fa-x-twitter text-xs leading-none"></i>
-    </a>
-    <a href="#" aria-label="Instagram" class="size-7 inline-flex items-center justify-center border border-gray-100 rounded-full text-gray-100 hover:text-cyan-400 hover:border-cyan-400 transition-colors">
-      <i class="fab fa-instagram text-xs leading-none"></i>
-    </a>
-    <a href="#" aria-label="YouTube" class="size-7 inline-flex items-center justify-center border border-gray-100 rounded-full text-gray-100 hover:text-cyan-400 hover:border-cyan-400 transition-colors">
-      <i class="fab fa-youtube text-xs leading-none"></i>
-    </a>
-    <a href="#" aria-label="TikTok" class="size-7 inline-flex items-center justify-center border border-gray-100 rounded-full text-gray-100 hover:text-cyan-400 hover:border-cyan-400 transition-colors">
-      <i class="fab fa-tiktok text-xs leading-none"></i>
-    </a>
-    <a href="#" aria-label="GitHub" class="size-7 inline-flex items-center justify-center border border-gray-100 rounded-full text-gray-100 hover:text-cyan-400 hover:border-cyan-400 transition-colors">
-      <i class="fab fa-github text-xs leading-none"></i>
-    </a>
-  </div>
+            <!-- Flex container replaces mr-1 and eliminates inline whitespace gaps -->
+            <div class="flex items-center justify-center gap-1.5">
+              <a href="#" aria-label="Facebook" class="size-7 inline-flex items-center justify-center border border-gray-100 rounded-full text-gray-100 hover:text-cyan-400 hover:border-cyan-400 transition-colors">
+                <i class="fab fa-facebook-f text-xs leading-none"></i>
+              </a>
+              <a href="#" aria-label="X Twitter" class="size-7 inline-flex items-center justify-center border border-gray-100 rounded-full text-gray-100 hover:text-cyan-400 hover:border-cyan-400 transition-colors">
+                <i class="fab fa-x-twitter text-xs leading-none"></i>
+              </a>
+              <a href="#" aria-label="Instagram" class="size-7 inline-flex items-center justify-center border border-gray-100 rounded-full text-gray-100 hover:text-cyan-400 hover:border-cyan-400 transition-colors">
+                <i class="fab fa-instagram text-xs leading-none"></i>
+              </a>
+              <a href="#" aria-label="YouTube" class="size-7 inline-flex items-center justify-center border border-gray-100 rounded-full text-gray-100 hover:text-cyan-400 hover:border-cyan-400 transition-colors">
+                <i class="fab fa-youtube text-xs leading-none"></i>
+              </a>
+              <a href="#" aria-label="TikTok" class="size-7 inline-flex items-center justify-center border border-gray-100 rounded-full text-gray-100 hover:text-cyan-400 hover:border-cyan-400 transition-colors">
+                <i class="fab fa-tiktok text-xs leading-none"></i>
+              </a>
+              <a href="#" aria-label="GitHub" class="size-7 inline-flex items-center justify-center border border-gray-100 rounded-full text-gray-100 hover:text-cyan-400 hover:border-cyan-400 transition-colors">
+                <i class="fab fa-github text-xs leading-none"></i>
+              </a>
+            </div>
 
-  <footer class="mt-10 text-sm text-center text-gray-100">
-    <p>&copy;MURID NAKAL 2026-2029. ALL RIGHTS RESERVED.</p>
-  </footer>
-</div>
+            <footer class="mt-10 text-xs font-medium text-center text-gray-100">
+              <p>&copy;MURID NAKAL 2026-2029. ALL RIGHTS RESERVED.</p>
+            </footer>
+          </div>
 
         </nav>
       </div>
@@ -270,7 +224,7 @@
           <div class="relative mb-4">
             <div class="absolute inset-0 bg-cyan-500/20 rounded-full blur-3xl"></div>
             <div class="text-6xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-r from-indigo-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent pb-2 relative">
-              Future of Navigation
+              Future of World
             </div>
           </div>
           <p class="text-xl md:text-2xl text-gray-400 max-w-3xl mb-8">
@@ -283,9 +237,9 @@
                 <span class="bg-gradient-to-r from-cyan-300 to-indigo-300 bg-clip-text text-transparent">Get Started</span>
               </button>
             </div>
-            <button class="px-6 py-3 bg-transparent border border-cyan-500/30 rounded-lg text-cyan-400 text-base font-medium flex items-center justify-center gap-2 hover:bg-cyan-900/10 hover:border-cyan-500/50 transition-all duration-300">
+            <!--<button class="px-6 py-3 bg-transparent border border-cyan-500/30 rounded-lg text-cyan-400 text-base font-medium flex items-center justify-center gap-2 hover:bg-cyan-900/10 hover:border-cyan-500/50 transition-all duration-300">
               Learn More
-            </button>
+            </button>-->
           </div>
         </div>
       </div>
